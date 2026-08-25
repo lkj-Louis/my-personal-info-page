@@ -11,10 +11,10 @@
             box-sizing: border-box;
         }
         body {
-            font-family: system-ui, -apple-system, sans-serif;
+            font-family: system-ui, -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
             background-color: #05050a;
             color: #e2e8f0;
-            line-height: 1.75;
+            line-height: 1.85;
             position: relative;
         }
         #particles {
@@ -26,127 +26,176 @@
             z-index: -1;
         }
         .container {
-            max-width: 920px;
+            max-width: 860px;
             margin: 0 auto;
-            padding: 48px 22px;
+            padding: 56px 24px;
         }
         .banner {
             text-align: center;
-            padding: 84px 0 60px;
+            padding: 96px 0 72px;
         }
         .banner h1 {
-            font-size: 2.9rem;
+            font-size: 3rem;
+            font-weight: 700;
             background: linear-gradient(90deg, #60a5fa, #a78bfa);
             -webkit-background-clip: text;
             color: transparent;
-            margin-bottom: 14px;
+            margin-bottom: 18px;
+            letter-spacing: 2px;
         }
         .banner .subtitle {
             color: #b4c5e4;
-            font-size: 1.15rem;
-            margin-bottom: 16px;
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
         }
         .banner .motto {
             color: #94a3b8;
-            font-size: 1.1rem;
-            max-width: 720px;
+            font-size: 1.05rem;
+            max-width: 640px;
             margin: 0 auto;
+            font-style: italic;
         }
         section {
-            margin: 64px 0;
+            margin: 80px 0;
         }
         h2 {
             color: #7dd3fc;
-            margin-bottom: 22px;
+            margin-bottom: 28px;
             border-left: 4px solid #818cf8;
-            padding-left: 14px;
-            font-size: 1.45rem;
+            padding-left: 16px;
+            font-size: 1.5rem;
+            font-weight: 600;
+            letter-spacing: 1px;
         }
         .card-wrap {
             display: grid;
-            gap: 20px;
+            gap: 24px;
         }
         .card {
-            background: rgba(25, 28, 42, 0.68);
-            border-radius: 16px;
-            padding: 28px;
-            border: 1px solid rgba(129, 140, 248, 0.16);
-            transition: 0.35s ease;
+            background: rgba(25, 28, 42, 0.62);
+            border-radius: 18px;
+            padding: 36px;
+            border: 1px solid rgba(129, 140, 248, 0.14);
+            transition: 0.4s ease;
+            backdrop-filter: blur(8px);
         }
         .card:hover {
-            border-color: rgba(129, 140, 248, 0.55);
-            box-shadow: 0 0 24px rgba(129, 140, 248, 0.22);
+            border-color: rgba(129, 140, 248, 0.5);
+            box-shadow: 0 0 32px rgba(129, 140, 248, 0.18);
+            transform: translateY(-2px);
+        }
+        .card h3 {
+            color: #cbd5e1;
+            margin-bottom: 14px;
+            font-size: 1.15rem;
+            font-weight: 600;
+        }
+        .card p {
+            color: #c7d2e0;
+            margin-bottom: 8px;
         }
         .tag-group {
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
-            margin-top: 16px;
+            margin-top: 18px;
         }
         .tag {
-            background: rgba(96, 165, 250, 0.12);
+            background: rgba(96, 165, 250, 0.1);
             color: #93c5fd;
-            padding: 5px 14px;
+            padding: 6px 16px;
             border-radius: 999px;
-            font-size: 0.92rem;
-            border: 1px solid rgba(96, 165, 250, 0.2);
+            font-size: 0.9rem;
+            border: 1px solid rgba(96, 165, 250, 0.18);
         }
         .tag.fun {
-            background: rgba(167, 139, 250, 0.12);
+            background: rgba(167, 139, 250, 0.1);
             color: #c4b5fd;
-            border: 1px solid rgba(167, 139, 250, 0.25);
+            border: 1px solid rgba(167, 139, 250, 0.22);
         }
         .divider {
             height: 1px;
-            background: linear-gradient(to right, transparent, #475569, transparent);
-            margin: 22px 0;
+            background: linear-gradient(to right, transparent, rgba(71, 85, 105, 0.6), transparent);
+            margin: 24px 0;
         }
-        /* 折叠面板样式 */
         .collapse-btn {
-            margin-top:16px;
-            background: rgba(96,165,250,0.08);
-            border:1px solid rgba(96,165,250,0.2);
-            color:#93c5fd;
-            padding:8px 16px;
-            border-radius:8px;
-            cursor:pointer;
-            font-size:0.95rem;
-            transition:0.25s;
+            margin-top: 20px;
+            background: rgba(96, 165, 250, 0.06);
+            border: 1px solid rgba(96, 165, 250, 0.18);
+            color: #93c5fd;
+            padding: 9px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 0.92rem;
+            transition: 0.3s;
+            letter-spacing: 0.5px;
         }
-        .collapse-btn:hover{
-            background:rgba(96,165,250,0.15);
+        .collapse-btn:hover {
+            background: rgba(96, 165, 250, 0.14);
+            border-color: rgba(96, 165, 250, 0.4);
         }
-        .collapse-content{
-            max-height:0;
-            overflow:hidden;
-            transition:max-height 0.5s ease;
-            margin-top:16px;
+        .collapse-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.55s ease;
+            margin-top: 0;
         }
-        .collapse-content.open{
-            max-height:2000px;
+        .collapse-content.open {
+            max-height: 3000px;
+            margin-top: 20px;
+        }
+        .note-item {
+            margin-bottom: 20px;
+            padding-left: 14px;
+            border-left: 2px solid rgba(129, 140, 248, 0.3);
+        }
+        .note-item .note-date {
+            color: #818cf8;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
+        }
+        .note-item .note-text {
+            color: #b8c5d6;
+            font-size: 0.95rem;
         }
         footer {
-            margin-top: 110px;
-            padding-top: 36px;
-            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            margin-top: 120px;
+            padding-top: 40px;
+            border-top: 1px solid rgba(255, 255, 255, 0.07);
             color: #94a3b8;
+        }
+        footer h3 {
+            color: #cbd5e1;
+            margin-bottom: 14px;
+        }
+        footer p {
+            margin-bottom: 6px;
         }
         a {
             color: #93c5fd;
             text-decoration: none;
+            transition: 0.2s;
         }
         a:hover {
+            color: #60a5fa;
             text-decoration: underline;
         }
         @media (max-width: 640px) {
             .banner h1 {
-                font-size: 2.1rem;
+                font-size: 2.2rem;
+            }
+            .banner {
+                padding: 64px 0 48px;
             }
             .container {
-                padding: 26px 16px;
+                padding: 30px 16px;
             }
             .card {
-                padding: 20px;
+                padding: 24px;
+            }
+            section {
+                margin: 56px 0;
             }
         }
     </style>
@@ -164,7 +213,7 @@
         <h2>关于我</h2>
         <div class="card-wrap">
             <div class="card">
-                <h3 style="margin-bottom:12px;color:#cbd5e1;">基础概览</h3>
+                <h3>基础概览</h3>
                 <p>视觉空间学习者，擅长长期沉淀，不擅长短期临场反应。</p>
                 <div class="tag-group">
                     <span class="tag fun">AI重度依赖患者</span>
@@ -196,17 +245,33 @@
         <div class="card-wrap">
             <div class="card">
                 <p><strong>喜爱书籍：</strong>西方现代哲学讲义、马斯克传、飞鸟集、薛兆丰经济学讲义</p>
-                <p style="margin-top:8px"><strong>喜爱UP主：</strong>小鹿Lawrence、小Lin说、影视飓风、迷因水母</p>
-                <p style="margin-top:8px"><strong>番剧：</strong>迷宫饭、葬送的芙莉莲、间谍过家家、命运拳台、艾莉同学、时光代理人</p>
-                <p style="margin-top:8px"><strong>电影：</strong>头号玩家、盗梦空间、生化危机、移动迷宫、黑客帝国</p>
+                <p><strong>喜爱UP主：</strong>小鹿Lawrence、小Lin说、影视飓风、迷因水母</p>
+                <p><strong>番剧：</strong>迷宫饭、葬送的芙莉莲、间谍过家家、命运拳台、艾莉同学、时光代理人</p>
+                <p><strong>电影：</strong>头号玩家、盗梦空间、生化危机、移动迷宫、黑客帝国</p>
                 <button class="collapse-btn">展开详情 ▾</button>
                 <div class="collapse-content">
                     <p><strong>信息接收习惯：</strong>看书涉猎比较杂，偏好长文章深度分析，轻度厌恶短视频，偶尔浏览小红书；重点关注哲学、心理学、经济学、运动领域。</p>
                     <div class="divider"></div>
                     <p><strong>踢球：</strong>司职前锋，偏向进攻，很少参与防守。</p>
-                    <p style="margin-top:8px"><strong>健身目标：</strong>为足球运动服务，同时实现可以放开吃的诉求。</p>
-                    <p style="margin-top:8px"><strong>象棋与绘画：</strong>视作和他人建立连接、产生交流的途径。</p>
-                    <p style="margin-top:8px"><strong>闲暇日常：</strong>喜欢在城市四处探索，寻觅风景，出门兜风。</p>
+                    <p><strong>健身目标：</strong>为足球运动服务，同时实现可以放开吃的诉求。</p>
+                    <p><strong>象棋与绘画：</strong>视作和他人建立连接、产生交流的途径。</p>
+                    <p><strong>闲暇日常：</strong>喜欢在城市四处探索，寻觅风景，出门兜风。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>心得体会</h2>
+        <div class="card-wrap">
+            <div class="card">
+                <p>记录日常思考、感悟与复盘。</p>
+                <button class="collapse-btn">展开详情 ▾</button>
+                <div class="collapse-content">
+                    <div class="note-item">
+                        <div class="note-date">待补充</div>
+                        <div class="note-text">这里可以写你的随笔、思考碎片、读书感悟、生活复盘。后续有新的心得，直接在这个区域添加新的 note-item 即可。</div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -244,12 +309,11 @@
         <h3>联系方式</h3>
         <p>邮箱：<a href="mailto:2047756558@qq.com">2047756558@qq.com</a></p>
         <p>微信：lkjintjinfp2026</p>
-        <p>GitHub：<a target="_blank" href="https://github.com/lkj‑Louis">lkj‑Louis</a></p>
+        <p>GitHub：<a target="_blank" href="https://github.com/lkj-Louis">lkj-Louis</a></p>
     </footer>
 </div>
 
 <script>
-//粒子背景
 const canvas = document.getElementById('particles');
 const ctx = canvas.getContext('2d');
 let w = canvas.width = window.innerWidth;
@@ -281,7 +345,6 @@ function loop(){
 }
 loop();
 
-//折叠交互
 document.querySelectorAll('.collapse-btn').forEach(btn=>{
     btn.addEventListener('click',function(){
         const content=this.nextElementSibling;
