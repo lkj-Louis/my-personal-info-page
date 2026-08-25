@@ -1,26 +1,174 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="zh-CN">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2685.6">
-  <style type="text/css">
-    body {background-color: #f1f1f1}
-    p.p2 {margin: 0.0px 0.0px 20.0px 0.0px; text-align: center; font: 14.4px 'PingFang SC'; color: #262626; -webkit-text-stroke: #262626}
-    span.s1 {font: 24.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
-    span.s2 {font-kerning: none; background-color: #ffffff}
-    span.s3 {font: 18.0px 'PingFang SC'; font-kerning: none; background-color: #ffffff}
-    span.s4 {font: 18.0px Arial; font-kerning: none; background-color: #ffffff}
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>卢科均 | 个人主页</title>
+    <style>
+        * {margin:0;padding:0;box-sizing:border-box;}
+        body{
+            font-family:system-ui,-apple-system,sans-serif;
+            background:#05050a;
+            color:#e2e8f0;
+            line-height:1.7;
+            position:relative;
+        }
+        #particles{
+            position:fixed;
+            top:0;left:0;
+            width:100vw;height:100vh;
+            z-index:-1;
+        }
+        .container{
+            max-width:900px;
+            margin:0 auto;
+            padding:40px 20px;
+        }
+        .banner{
+            text-align:center;
+            padding:80px 0;
+        }
+        .banner h1{
+            font-size:2.8rem;
+            background:linear-gradient(90deg,#60a5fa,#a78bfa);
+            -webkit-background-clip:text;
+            color:transparent;
+            margin-bottom:12px;
+        }
+        .banner .motto{
+            color:#94a3b8;
+            font-size:1.1rem;
+            max-width:700px;
+            margin:0 auto;
+        }
+        section{
+            margin:60px 0;
+        }
+        h2{
+            color:#7dd3fc;
+            margin-bottom:20px;
+            border-left:4px solid #818cf8;
+            padding-left:12px;
+        }
+        .card{
+            background:rgba(25,28,40,0.65);
+            border-radius:14px;
+            padding:24px;
+            margin-bottom:18px;
+            border:1px solid rgba(129,140,248,0.15);
+            transition:0.3s ease;
+        }
+        .card:hover{
+            border-color:rgba(129,140,248,0.5);
+            box-shadow:0 0 18px rgba(129,140,248,0.18);
+        }
+        footer{
+            margin-top:100px;
+            padding-top:30px;
+            border-top:1px solid rgba(255,255,255,0.08);
+            color:#94a3b8;
+        }
+        a{
+            color:#93c5fd;
+            text-decoration:none;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        @media(max-width:640px){
+            .banner h1{font-size:2rem;}
+            .container{padding:24px 14px;}
+        }
+    </style>
 </head>
 <body>
-<h1 style="margin: 0.0px 0.0px 16.1px 0.0px; text-align: center; font: 24.0px 'PingFang SC Semibold'; color: #262626; -webkit-text-stroke: #262626"><span class="s1"><b>个人展示</b><b></b></span></h1>
-<p class="p2"><span class="s2">这是一份用于展示个人基本信息和个人项目的简单网页。</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; text-align: center; font: 18.0px 'PingFang SC Semibold'; color: #262626; -webkit-text-stroke: #262626"><span class="s3"><b>项目</b></span><span class="s4"><b>1</b><b></b></span></h2>
-<p class="p2"><span class="s2">简短描述项目</span></p>
-<h2 style="margin: 0.0px 0.0px 14.9px 0.0px; text-align: center; font: 18.0px 'PingFang SC Semibold'; color: #262626; -webkit-text-stroke: #262626"><span class="s3"><b>项目</b></span><span class="s4"><b>2</b><b></b></span></h2>
-<p class="p2"><span class="s2">简短描述项目</span></p>
+<div id="particles"></div>
+<div class="container">
+    <div class="banner">
+        <h1>卢科均</h1>
+        <p>宁波大学 · 经济学大一新生</p>
+        <div class="motto">宏大的理想未必能对抗虚无，而微小的选择却可以——艾尔海森</div>
+    </div>
+
+    <section>
+        <h2>关于我</h2>
+        <div class="card">
+            <p>视觉空间学习者，擅长长期经验沉淀，短期临场反应偏弱。英语能力较好，AI重度使用者，小镇做题家，热爱各类球类运动。</p>
+            <p style="margin-top:10px">外表含蓄内敛；在挚友面前活泼坦诚。我并非单一固定人格，拥有可切换的INTJ/ENTJ决策模式、INFP感知模式，以及少年时期建立的守卫者自爱内核，持续自省迭代。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>兴趣与生活</h2>
+        <div class="card">
+            <p>运动：每日踢球，坚持健身，球类运动均有涉猎</p>
+            <p>文艺：画画、象棋，写诗目前停更沉淀</p>
+            <p>娱乐：原神剧情向玩家，王者荣耀</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>人生转折点</h2>
+        <div class="card">
+            <p>认识树成林，接触钱一。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>阅读与偏好</h2>
+        <div class="card">
+            <p>书籍：《西方现代哲学讲义》《马斯克传》《飞鸟集》</p>
+            <p>偏好：有深度的文学解读，重视思想厚度。</p>
+        </div>
+    </section>
+
+    <section>
+        <h2>未来规划</h2>
+        <div class="card">
+            <p>终身学习，为热爱而探索，拒绝内卷路径锁定。为环游世界积累能力与资本，活出自由不被定义的人生。</p>
+        </div>
+    </section>
+
+    <footer>
+        <h3>联系方式</h3>
+        <p>邮箱：<a href="mailto:2047756558@qq.com">2047756558@qq.com</a></p>
+        <p>微信：lkjintjinfp2026</p>
+        <p>GitHub：<a target="_blank" href="https://github.com/lkj-Louis">lkj‑Louis</a></p>
+    </footer>
+</div>
+
+<script>
+//简易粒子背景
+const canvas=document.createElement('canvas');
+const ctx=canvas.getContext('2d');
+document.getElementById('particles').appendChild(canvas);
+let w=canvas.width=window.innerWidth;
+let h=canvas.height=window.innerHeight;
+window.addEventListener('resize',()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight;});
+const particles=[];
+for(let i=0;i<80;i++){
+    particles.push({
+        x:Math.random()*w,
+        y:Math.random()*h,
+        r:Math.random()*1.2+0.2,
+        vx:(Math.random()-0.5)*0.35,
+        vy:(Math.random()-0.5)*0.35
+    })
+}
+function loop(){
+    ctx.clearRect(0,0,w,h);
+    ctx.fillStyle='rgba(140,160,255,0.45)';
+    particles.forEach(p=>{
+        p.x+=p.vx; p.y+=p.vy;
+        if(p.x<0)p.x=w;if(p.x>w)p.x=0;
+        if(p.y<0)p.y=h;if(p.y>h)p.y=0;
+        ctx.beginPath();
+        ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+        ctx.fill();
+    })
+    requestAnimationFrame(loop);
+}
+loop();
+</script>
 </body>
 </html>
