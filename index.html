@@ -5,127 +5,238 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>卢科均 | 个人主页</title>
     <style>
-        * {margin:0;padding:0;box-sizing:border-box;}
-        body{
-            font-family:system-ui,-apple-system,sans-serif;
-            background:#05050a;
-            color:#e2e8f0;
-            line-height:1.7;
-            position:relative;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        #particles{
-            position:fixed;
-            top:0;left:0;
-            width:100vw;height:100vh;
-            z-index:-1;
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #05050a;
+            color: #e2e8f0;
+            line-height: 1.75;
+            position: relative;
         }
-        .container{
-            max-width:900px;
-            margin:0 auto;
-            padding:40px 20px;
+        #particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
         }
-        .banner{
-            text-align:center;
-            padding:80px 0;
+        .container {
+            max-width: 920px;
+            margin: 0 auto;
+            padding: 48px 22px;
         }
-        .banner h1{
-            font-size:2.8rem;
-            background:linear-gradient(90deg,#60a5fa,#a78bfa);
-            -webkit-background-clip:text;
-            color:transparent;
-            margin-bottom:12px;
+        .banner {
+            text-align: center;
+            padding: 84px 0 60px;
         }
-        .banner .motto{
-            color:#94a3b8;
-            font-size:1.1rem;
-            max-width:700px;
-            margin:0 auto;
+        .banner h1 {
+            font-size: 2.9rem;
+            background: linear-gradient(90deg, #60a5fa, #a78bfa);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-bottom: 14px;
         }
-        section{
-            margin:60px 0;
+        .banner .subtitle {
+            color: #b4c5e4;
+            font-size: 1.15rem;
+            margin-bottom: 16px;
         }
-        h2{
-            color:#7dd3fc;
-            margin-bottom:20px;
-            border-left:4px solid #818cf8;
-            padding-left:12px;
+        .banner .motto {
+            color: #94a3b8;
+            font-size: 1.1rem;
+            max-width: 720px;
+            margin: 0 auto;
         }
-        .card{
-            background:rgba(25,28,40,0.65);
-            border-radius:14px;
-            padding:24px;
-            margin-bottom:18px;
-            border:1px solid rgba(129,140,248,0.15);
-            transition:0.3s ease;
+        section {
+            margin: 64px 0;
         }
-        .card:hover{
-            border-color:rgba(129,140,248,0.5);
-            box-shadow:0 0 18px rgba(129,140,248,0.18);
+        h2 {
+            color: #7dd3fc;
+            margin-bottom: 22px;
+            border-left: 4px solid #818cf8;
+            padding-left: 14px;
+            font-size: 1.45rem;
         }
-        footer{
-            margin-top:100px;
-            padding-top:30px;
-            border-top:1px solid rgba(255,255,255,0.08);
-            color:#94a3b8;
+        .card-wrap {
+            display: grid;
+            gap: 20px;
         }
-        a{
+        .card {
+            background: rgba(25, 28, 42, 0.68);
+            border-radius: 16px;
+            padding: 28px;
+            border: 1px solid rgba(129, 140, 248, 0.16);
+            transition: 0.35s ease;
+        }
+        .card:hover {
+            border-color: rgba(129, 140, 248, 0.55);
+            box-shadow: 0 0 24px rgba(129, 140, 248, 0.22);
+        }
+        .tag-group {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 16px;
+        }
+        .tag {
+            background: rgba(96, 165, 250, 0.12);
+            color: #93c5fd;
+            padding: 5px 14px;
+            border-radius: 999px;
+            font-size: 0.92rem;
+            border: 1px solid rgba(96, 165, 250, 0.2);
+        }
+        .tag.fun {
+            background: rgba(167, 139, 250, 0.12);
+            color: #c4b5fd;
+            border: 1px solid rgba(167, 139, 250, 0.25);
+        }
+        .divider {
+            height: 1px;
+            background: linear-gradient(to right, transparent, #475569, transparent);
+            margin: 22px 0;
+        }
+        /* 折叠面板样式 */
+        .collapse-btn {
+            margin-top:16px;
+            background: rgba(96,165,250,0.08);
+            border:1px solid rgba(96,165,250,0.2);
             color:#93c5fd;
-            text-decoration:none;
+            padding:8px 16px;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:0.95rem;
+            transition:0.25s;
         }
-        a:hover{
-            text-decoration:underline;
+        .collapse-btn:hover{
+            background:rgba(96,165,250,0.15);
         }
-        @media(max-width:640px){
-            .banner h1{font-size:2rem;}
-            .container{padding:24px 14px;}
+        .collapse-content{
+            max-height:0;
+            overflow:hidden;
+            transition:max-height 0.5s ease;
+            margin-top:16px;
+        }
+        .collapse-content.open{
+            max-height:2000px;
+        }
+        footer {
+            margin-top: 110px;
+            padding-top: 36px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            color: #94a3b8;
+        }
+        a {
+            color: #93c5fd;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        @media (max-width: 640px) {
+            .banner h1 {
+                font-size: 2.1rem;
+            }
+            .container {
+                padding: 26px 16px;
+            }
+            .card {
+                padding: 20px;
+            }
         }
     </style>
 </head>
 <body>
-<div id="particles"></div>
+<canvas id="particles"></canvas>
 <div class="container">
     <div class="banner">
         <h1>卢科均</h1>
-        <p>宁波大学 · 经济学大一新生</p>
+        <p class="subtitle">宁波大学 · 经济学大一新生</p>
         <div class="motto">宏大的理想未必能对抗虚无，而微小的选择却可以——艾尔海森</div>
     </div>
 
     <section>
         <h2>关于我</h2>
-        <div class="card">
-            <p>视觉空间学习者，擅长长期经验沉淀，短期临场反应偏弱。英语能力较好，AI重度使用者，小镇做题家，热爱各类球类运动。</p>
-            <p style="margin-top:10px">外表含蓄内敛；在挚友面前活泼坦诚。我并非单一固定人格，拥有可切换的INTJ/ENTJ决策模式、INFP感知模式，以及少年时期建立的守卫者自爱内核，持续自省迭代。</p>
+        <div class="card-wrap">
+            <div class="card">
+                <h3 style="margin-bottom:12px;color:#cbd5e1;">基础概览</h3>
+                <p>视觉空间学习者，擅长长期沉淀，不擅长短期临场反应。</p>
+                <div class="tag-group">
+                    <span class="tag fun">AI重度依赖患者</span>
+                    <span class="tag fun">原神剧情向玩家</span>
+                    <span class="tag fun">王者守约专职玩家</span>
+                </div>
+                <button class="collapse-btn">展开详情 ▾</button>
+                <div class="collapse-content">
+                    <p>对外偏内向，有时会因为不敢沟通造成现实损失；遇事习惯理性分析，不擅长感性共情安慰他人。</p>
+                    <div class="divider"></div>
+                    <p><strong>短板：</strong>高压场景临场容易卡词；机械背诵记忆能力弱；容易因人际关系矛盾陷入自我内耗；偶尔会放纵饮食；数理能力弱，逻辑能力弱，对于代码逻辑不敏感。</p>
+                    <div class="divider"></div>
+                    <p><strong>MBTI演变：</strong>小学ENFP → 初中INFP → 高一上INTP → 高中INTJ → 现阶段在I/ENTJ之间摇摆。</p>
+                    <div class="divider"></div>
+                    <p><strong>讨厌的人的特质：</strong>自吹自擂、待人不真诚、习惯贬损他人、自带优越感、容易情绪上头争吵。</p>
+                    <div class="divider"></div>
+                    <p><strong>渴望结识的人群与圈子：</strong>拥有个人特长的人、真诚自然自洽的人、善良愿意帮助他人的人。</p>
+                    <div class="divider"></div>
+                    <p><strong>心理层面：</strong>害怕恐怖题材，包括电影闪灵、痴迷，童年受查理九世、生化危机带来的惊悚冲击。</p>
+                    <div class="divider"></div>
+                    <p><strong>高压特殊模式：</strong>处在高压生存环境下，会自动触发自我保护：切断对外社交、主动和他人拉开距离、自我封闭，但同时执行力会被拉高。</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section>
-        <h2>兴趣与生活</h2>
-        <div class="card">
-            <p>运动：每日踢球，坚持健身，球类运动均有涉猎</p>
-            <p>文艺：画画、象棋，写诗目前停更沉淀</p>
-            <p>娱乐：原神剧情向玩家，王者荣耀</p>
+        <h2>阅读与爱好</h2>
+        <div class="card-wrap">
+            <div class="card">
+                <p><strong>喜爱书籍：</strong>西方现代哲学讲义、马斯克传、飞鸟集、薛兆丰经济学讲义</p>
+                <p style="margin-top:8px"><strong>喜爱UP主：</strong>小鹿Lawrence、小Lin说、影视飓风、迷因水母</p>
+                <p style="margin-top:8px"><strong>番剧：</strong>迷宫饭、葬送的芙莉莲、间谍过家家、命运拳台、艾莉同学、时光代理人</p>
+                <p style="margin-top:8px"><strong>电影：</strong>头号玩家、盗梦空间、生化危机、移动迷宫、黑客帝国</p>
+                <button class="collapse-btn">展开详情 ▾</button>
+                <div class="collapse-content">
+                    <p><strong>信息接收习惯：</strong>看书涉猎比较杂，偏好长文章深度分析，轻度厌恶短视频，偶尔浏览小红书；重点关注哲学、心理学、经济学、运动领域。</p>
+                    <div class="divider"></div>
+                    <p><strong>踢球：</strong>司职前锋，偏向进攻，很少参与防守。</p>
+                    <p style="margin-top:8px"><strong>健身目标：</strong>为足球运动服务，同时实现可以放开吃的诉求。</p>
+                    <p style="margin-top:8px"><strong>象棋与绘画：</strong>视作和他人建立连接、产生交流的途径。</p>
+                    <p style="margin-top:8px"><strong>闲暇日常：</strong>喜欢在城市四处探索，寻觅风景，出门兜风。</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section>
         <h2>人生转折点</h2>
-        <div class="card">
-            <p>认识树成林，接触钱一。</p>
-        </div>
-    </section>
-
-    <section>
-        <h2>阅读与偏好</h2>
-        <div class="card">
-            <p>书籍：《西方现代哲学讲义》《马斯克传》《飞鸟集》</p>
-            <p>偏好：有深度的文学解读，重视思想厚度。</p>
+        <div class="card-wrap">
+            <div class="card">
+                <p>认识树成林并接触到钱一，认识各类大方的贵人提供资源</p>
+                <button class="collapse-btn">展开详情 ▾</button>
+                <div class="collapse-content">
+                    <p>带给我的改变：学会用理性视角看待现实，也塑造出了一部分执行力，让我有了更多接触新的可能性。</p>
+                </div>
+            </div>
         </div>
     </section>
 
     <section>
         <h2>未来规划</h2>
-        <div class="card">
-            <p>终身学习，为热爱而探索，拒绝内卷路径锁定。为环游世界积累能力与资本，活出自由不被定义的人生。</p>
+        <div class="card-wrap">
+            <div class="card">
+                <p>追求积极向上、拒绝安于现状，向往无限迭代、无限进步的生活</p>
+                <button class="collapse-btn">展开详情 ▾</button>
+                <div class="collapse-content">
+                    <p><strong>短期（大学阶段）：</strong>希望多多拓展社交，进入不同圈子，去了解形形色色的人正在做什么样的事。</p>
+                    <div class="divider"></div>
+                    <p><strong>长期：</strong>保持向上迭代，永远不满足停滞的生活状态，无限迭代，无限进步。</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -133,33 +244,33 @@
         <h3>联系方式</h3>
         <p>邮箱：<a href="mailto:2047756558@qq.com">2047756558@qq.com</a></p>
         <p>微信：lkjintjinfp2026</p>
-        <p>GitHub：<a target="_blank" href="https://github.com/lkj-Louis">lkj‑Louis</a></p>
+        <p>GitHub：<a target="_blank" href="https://github.com/lkj‑Louis">lkj‑Louis</a></p>
     </footer>
 </div>
 
 <script>
-//简易粒子背景
-const canvas=document.createElement('canvas');
-const ctx=canvas.getContext('2d');
-document.getElementById('particles').appendChild(canvas);
-let w=canvas.width=window.innerWidth;
-let h=canvas.height=window.innerHeight;
+//粒子背景
+const canvas = document.getElementById('particles');
+const ctx = canvas.getContext('2d');
+let w = canvas.width = window.innerWidth;
+let h = canvas.height = window.innerHeight;
 window.addEventListener('resize',()=>{w=canvas.width=innerWidth;h=canvas.height=innerHeight;});
 const particles=[];
-for(let i=0;i<80;i++){
+for(let i=0;i<85;i++){
     particles.push({
         x:Math.random()*w,
         y:Math.random()*h,
-        r:Math.random()*1.2+0.2,
-        vx:(Math.random()-0.5)*0.35,
-        vy:(Math.random()-0.5)*0.35
+        r:Math.random()*1.3+0.25,
+        vx:(Math.random()-0.5)*0.32,
+        vy:(Math.random()-0.5)*0.32
     })
 }
 function loop(){
     ctx.clearRect(0,0,w,h);
-    ctx.fillStyle='rgba(140,160,255,0.45)';
+    ctx.fillStyle='rgba(140,160,255,0.42)';
     particles.forEach(p=>{
-        p.x+=p.vx; p.y+=p.vy;
+        p.x+=p.vx;
+        p.y+=p.vy;
         if(p.x<0)p.x=w;if(p.x>w)p.x=0;
         if(p.y<0)p.y=h;if(p.y>h)p.y=0;
         ctx.beginPath();
@@ -169,6 +280,15 @@ function loop(){
     requestAnimationFrame(loop);
 }
 loop();
+
+//折叠交互
+document.querySelectorAll('.collapse-btn').forEach(btn=>{
+    btn.addEventListener('click',function(){
+        const content=this.nextElementSibling;
+        content.classList.toggle('open');
+        this.textContent=content.classList.contains('open')?'收起详情 ▴':'展开详情 ▾';
+    })
+})
 </script>
 </body>
 </html>
