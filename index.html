@@ -1096,46 +1096,55 @@
             </div>
         </div>
 
-    </div>
-    <!-- 友情链接区域 -->
-  <div class="card">
-    <div class="card-header">
-      <div class="card-title">友情链接 / Friend Links</div>
-    </div>
-    <div class="contact-grid">
-      
-      <!-- 朋友 1: davidz0926 -->
-      <a class="contact-btn" target="_blank" rel="noopener noreferrer" href="https://davidz0926.github.io/">
-        <img src="https://www.google.com/s2/favicons?domain=davidz0926.github.io&sz=64" width="28" height="28" style="border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="davidz0926">
-        <span class="label">
-          <strong>davidz0926</strong>
-          <small>个人主页 / 博客</small>
-        </span>
-        <span>↗</span>
-      </a>
+    <!-- 友情链接板块 (Bento Grid 纯净版) -->
+        <div class="bento-card col-12">
+            <div class="card-header">
+                <div class="card-title"><span>🤝</span> 友情链接与同行者</div>
+                <span class="tag cyan">同行互联 · 保持探索</span>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; margin-top: 10px;">
+                
+                <!-- 友链 1: 张林晖 (davidz) -->
+                <a href="https://davidz0926.github.io/" target="_blank" rel="noopener noreferrer" style="background: var(--terminal-bg); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: var(--text-main); transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent-cyan)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border)'; this.style.transform='translateY(0)';">
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 600; font-size: 1rem; color: var(--text-main);">张林晖</span>
+                            <span style="font-size: 0.75rem; padding: 2px 7px; border-radius: 6px; background: rgba(56, 189, 248, 0.1); color: var(--accent-cyan); font-family: 'Fira Code', monospace;">@davidz</span>
+                        </div>
+                        <span style="font-size: 0.82rem; color: var(--text-dim); font-family: 'Fira Code', monospace;">davidz0926.github.io</span>
+                    </div>
+                    <span style="color: var(--text-dim); font-size: 1.1rem; transition: color 0.2s;">↗</span>
+                </a>
 
-      <!-- 朋友 2: yeyaozhi -->
-      <a class="contact-btn" target="_blank" rel="noopener noreferrer" href="http://yeyaozhi.eu.cc/">
-        <img src="https://www.google.com/s2/favicons?domain=yeyaozhi.eu.cc&sz=64" width="28" height="28" style="border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="yeyaozhi">
-        <span class="label">
-          <strong>叶耀枝</strong>
-          <small>个人站点</small>
-        </span>
-        <span>↗</span>
-      </a>
+                <!-- 友链 2: 叶耀之 (yeyaozhi) -->
+                <a href="http://yeyaozhi.eu.cc/" target="_blank" rel="noopener noreferrer" style="background: var(--terminal-bg); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: var(--text-main); transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent-emerald)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border)'; this.style.transform='translateY(0)';">
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 600; font-size: 1rem; color: var(--text-main);">叶耀之</span>
+                            <span style="font-size: 0.75rem; padding: 2px 7px; border-radius: 6px; background: rgba(52, 211, 153, 0.1); color: var(--accent-emerald); font-family: 'Fira Code', monospace;">@yeyaozhi</span>
+                        </div>
+                        <span style="font-size: 0.82rem; color: var(--text-dim); font-family: 'Fira Code', monospace;">yeyaozhi.eu.cc</span>
+                    </div>
+                    <span style="color: var(--text-dim); font-size: 1.1rem; transition: color 0.2s;">↗</span>
+                </a>
 
-      <!-- 朋友 3: empathless -->
-      <a class="contact-btn" target="_blank" rel="noopener noreferrer" href="https://home.empathless.com">
-        <img src="https://www.google.com/s2/favicons?domain=home.empathless.com&sz=64" width="28" height="28" style="border-radius: 50%; object-fit: cover; flex-shrink: 0;" alt="empathless">
-        <span class="label">
-          <strong>Empathless</strong>
-          <small>个人主页</small>
-        </span>
-        <span>↗</span>
-      </a>
+                <!-- 友链 3: 黄炫文 (empathless) -->
+                <a href="https://home.empathless.com" target="_blank" rel="noopener noreferrer" style="background: var(--terminal-bg); border: 1px solid var(--border); border-radius: 14px; padding: 16px 20px; display: flex; align-items: center; justify-content: space-between; text-decoration: none; color: var(--text-main); transition: all 0.3s ease;" onmouseover="this.style.borderColor='var(--accent-purple)'; this.style.transform='translateY(-2px)';" onmouseout="this.style.borderColor='var(--border)'; this.style.transform='translateY(0)';">
+                    <div style="display: flex; flex-direction: column; gap: 4px;">
+                        <div style="display: flex; align-items: center; gap: 8px;">
+                            <span style="font-weight: 600; font-size: 1rem; color: var(--text-main);">黄炫文</span>
+                            <span style="font-size: 0.75rem; padding: 2px 7px; border-radius: 6px; background: rgba(168, 85, 247, 0.1); color: var(--accent-purple); font-family: 'Fira Code', monospace;">@empathless</span>
+                        </div>
+                        <span style="font-size: 0.82rem; color: var(--text-dim); font-family: 'Fira Code', monospace;">home.empathless.com</span>
+                    </div>
+                    <span style="color: var(--text-dim); font-size: 1.1rem; transition: color 0.2s;">↗</span>
+                </a>
 
+            </div>
+        </div>
     </div>
-  </div>
+    
     <footer>
         <p>© <span id="currentYear"></span> 卢科均 Louis. Built with Logic, Aesthetics & AI Iteration.</p>
     </footer>
